@@ -9,9 +9,10 @@ Rails.application.routes.draw do
       resources :finbits do
         collection do
           post "login"
+          post "uploadStatement"
+          get "summary/:account_uid" => "finbits#summary"
         end
       end
     end
   end
-
 end
