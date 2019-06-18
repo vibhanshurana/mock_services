@@ -1,0 +1,28 @@
+<h1>Listing of Mock Services</h1>
+ 
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Code</th>
+    <th>URL</th>
+    <th colspan="3"></th>
+  </tr>
+ 
+  <% @mock_services.each do |mock_service| %>
+    <tr>
+      <td><%= mock_service.title %></td>
+      <td><%= mock_service.code %></td>
+      <td><%= mock_service.url %></td>
+      <td><%= link_to 'Show', mock_service_path(mock_service) %></td>
+      <td><%= link_to 'Edit', edit_mock_service_path(mock_service) %></td>
+      <td><%= link_to 'Destroy', mock_service_path(mock_service),
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %>
+      </td>
+    </tr>
+  <% end %>
+</table>
+
+<p>
+  <%= link_to 'New Mock Service', new_mock_service_path %>
+</p>

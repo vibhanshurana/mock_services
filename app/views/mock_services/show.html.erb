@@ -1,0 +1,31 @@
+<p>
+  <strong>Title:</strong>
+  <%= @mock_service.title %>
+
+  <p>
+    <strong>Code:</strong>
+    <%= @mock_service.code %>
+  </p>
+
+  <p>
+    <strong>URL:</strong>
+    <%= @mock_service.url %>
+  </p>
+
+  <p>
+    <strong>Service Provider:</strong>
+    <%= @mock_service.service_provider %>
+  </p>
+
+  <p>
+    <strong>API Request:</strong>
+    <%= @mock_service.request %>
+  </p>
+
+  <p>
+    <strong>API Response:</strong>
+    <%= @mock_service.response %>
+  </p>
+</p>
+<%= link_to 'Edit', edit_mock_service_path(@mock_service) %> 
+<%= link_to 'Back', mock_services_path %>

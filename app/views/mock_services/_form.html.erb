@@ -1,0 +1,49 @@
+<%= form_with model: @mock_service, local: true do |form| %>
+  <% if @mock_service.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(@mock_service.errors.count, "error") %> prohibited
+        this service from being saved:
+      </h2>
+      <ul>
+        <% @mock_service.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <p>
+    <%= form.label :title %><br>
+    <%= form.text_field :title %>
+  </p>
+
+  <p>
+    <%= form.label :code %><br>
+    <%= form.text_area :code %>
+  </p>
+
+  <p>
+    <%= form.label :url %><br>
+    <%= form.text_field :url %>
+  </p>
+
+  <p>
+    <%= form.label :service_provider %><br>
+    <%= form.text_field :service_provider %>
+  </p>
+
+  <p>
+    <%= form.label :request %><br>
+    <%= form.text_field :request %>
+  </p>
+ 
+  <p>
+    <%= form.label :response %><br>
+    <%= form.text_area :response %>
+  </p>
+ 
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>
