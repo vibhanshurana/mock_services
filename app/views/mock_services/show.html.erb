@@ -1,31 +1,35 @@
-<p>
-  <strong>Title:</strong>
-  <%= @mock_service.title %>
-
-  <p>
-    <strong>Code:</strong>
-    <%= @mock_service.code %>
-  </p>
-
-  <p>
-    <strong>URL:</strong>
-    <%= @mock_service.url %>
-  </p>
-
-  <p>
-    <strong>Service Provider:</strong>
-    <%= @mock_service.service_provider %>
-  </p>
-
-  <p>
-    <strong>API Request:</strong>
-    <%= @mock_service.request %>
-  </p>
-
-  <p>
-    <strong>API Response:</strong>
-    <%= @mock_service.response %>
-  </p>
-</p>
-<%= link_to 'Edit', edit_mock_service_path(@mock_service) %> 
-<%= link_to 'Back', mock_services_path %>
+<div class="container">
+  <h2>Full Details of Service</h2>
+  <table class="table table-striped">
+    <tbody>
+      <tr>
+        <td>Title:</td>
+        <td><%= @mock_service.title %></td>
+      </tr>
+      <tr>
+        <td>Code:</td>
+        <td><%= @mock_service.code %></td>
+      </tr>
+      <tr>
+        <td>URL:</td>
+        <td><%= @mock_service.url %></td>
+      </tr>
+      <tr>
+        <td>Service Provider:</td>
+        <td><%= @mock_service.service_provider %></td>
+      </tr>
+      <tr>
+        <td>API Request:</td>
+        <td><%= @mock_service.request %></td>
+      </tr>
+      <tr>
+        <td>API Response:</td>
+        <td><%= @mock_service.response %></td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="btn btn-default">
+    <%= link_to 'Edit', edit_mock_service_path(@mock_service), :class => "btn" %> |
+    <%= link_to 'Back', mock_services_path, :class => "btn" %>
+  </div>
+</div>

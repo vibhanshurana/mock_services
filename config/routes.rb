@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   #root directory
-  root 'mock_service#index'
+  root 'mock_services#index'
 
   resources :mock_services
 
