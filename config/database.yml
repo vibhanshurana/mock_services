@@ -16,4 +16,10 @@ test:
 
 production:
   <<: *default
-  database: productionss
+  # database: productionss
+  database: mock_services
+  username: mysql_user
+  password: <%= ENV['MOCK_SERVICES_PASS'] %>
+  host: <%= ENV['MOCK_SERVICES_DATABASE_HOST'] %>
+  port: <%= ENV['MOCK_SERVICES_DATABASE_PORT'] %>
+  SECRET_KEY_BASE: 4e6c9bcb0404ed02d5eb662b5f566c8e3fdff66c92091c5f3efb7523e8f1547325b7b5b8fba6f655b3e5e8dfb520b897108c3665835e0d6a5edf208df96a3c93
